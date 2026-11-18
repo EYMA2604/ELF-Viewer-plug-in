@@ -28,7 +28,7 @@ Instead of replacing the file with separate reports, it keeps the byte layout in
 
 ### 1. Save the script
 
-Save the viewer as `elf_viewer_mouse_wheel.py`. If your copy ends in `.py.txt`, remove the final `.txt` first.
+Save the viewer as `ELF_Viewer.py`. If your copy ends in `.py.txt`, remove the final `.txt` first.
 
 You need Python 3 and a terminal with Python's `curses` support for the interactive view. No third-party Python packages are required.
 
@@ -37,7 +37,7 @@ You need Python 3 and a terminal with Python's `curses` support for the interact
 Put the script beside your ELF file, or use full paths:
 
 ```bash
-python3 elf_viewer_mouse_wheel.py ./main
+python3 ELF_Viewer.py ./main
 ```
 
 The target file is opened for reading. It is **not executed or modified**.
@@ -115,25 +115,25 @@ Only full 16-byte rows totaling at least 64 zero bytes inside a single eligible 
 Export the same annotated byte table without opening the interactive view:
 
 ```bash
-python3 elf_viewer_mouse_wheel.py --dump ./main
+python3 ELF_Viewer.py --dump ./main
 ```
 
 Show the first `0x80` bytes. Range values are hexadecimal; the end is exclusive. The start is rounded down to a 16-byte row boundary:
 
 ```bash
-python3 elf_viewer_mouse_wheel.py --dump --range 0:80 ./main
+python3 ELF_Viewer.py --dump --range 0:80 ./main
 ```
 
 Use ASCII markers and a shorter notes column:
 
 ```bash
-python3 elf_viewer_mouse_wheel.py --dump --ascii --notes-width 80 ./main
+python3 ELF_Viewer.py --dump --ascii --notes-width 80 ./main
 ```
 
 Save a report:
 
 ```bash
-python3 elf_viewer_mouse_wheel.py --dump ./main > main.annotated.txt
+python3 ELF_Viewer.py --dump ./main > main.annotated.txt
 ```
 
 Dump mode always shows the bytes in the requested range without folding. When input or output is not a terminal, or `curses` is unavailable, the script falls back to plain-text output.
@@ -166,7 +166,7 @@ If mouse input does not behave as expected:
 If the columns or markers look wrong, widen the terminal or try:
 
 ```bash
-python3 elf_viewer_mouse_wheel.py --ascii --no-color ./main
+python3 ELF_Viewer.py --ascii --no-color ./main
 ```
 
 ## Scope and limits
