@@ -14,7 +14,7 @@ Instead of replacing the file with separate reports, it keeps the byte layout in
 
 ## A look inside
 
-![The viewer inspecting e_phoff in a small Linux ELF demo](assets/viewer.png)
+![The viewer inspecting e_phoff in a small Linux ELF demo](https://github.com/user-attachments/assets/002ffe55-bba9-4b65-9229-deb1bf776820)
 
 *Captured from the current viewer running on a small compiled Linux demo, rendered in xterm.js. This is not a VS Code screenshot. Colors follow the terminal theme.*
 
